@@ -132,7 +132,6 @@ body::-webkit-scrollbar-thumb:hover {
 .profile-photo:hover {
     filter: brightness(1) contrast(1.2); /* Brighter on hover */
 }
-}
 /* Header Styling - ENERGETIC DARK */
 header {
     background: linear-gradient(90deg, #00C8FF, #007bff); /* Electric Blue gradient */
@@ -403,6 +402,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
 
 
 
