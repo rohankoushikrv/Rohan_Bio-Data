@@ -108,11 +108,11 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(-5px); /* Lift effect */
 }
 
-/* Hero Section (Profile Picture) */
 .hero-section {
     position: relative;
-    height: 300px; /* Generous space for the image */
-    background: linear-gradient(45deg, #00C8FF, #007bff); /* Blue gradient fallback */
+    height: 300px; /* Desktop height */
+    width: 100%;   /* Full width */
+    background: linear-gradient(45deg, #00C8FF, #007bff); /* Gradient fallback */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,18 +120,17 @@ body::-webkit-scrollbar-thumb:hover {
     border-bottom: 3px solid #00C8FF;
 }
 
+/* Profile Photo */
 .profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.9) contrast(1.1); /* Subtle enhancement */
+    max-width: 100%;       /* Prevents overflow */
+    max-height: 100%;      /* Keeps within hero height */
+    object-fit: cover;     /* Fills space without distortion */
+    object-position: center center; /* Always center the image */
+    filter: brightness(0.9) contrast(1.1);
     transition: filter 0.3s ease;
+    display: block;
+    margin: 0 auto;        /* Centers horizontally */
 }
-
-.profile-photo:hover {
-    filter: brightness(1) contrast(1.2); /* Brighter on hover */
-}
-
 
 /* Header Styling - ENERGETIC DARK */
 header {
@@ -403,6 +402,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
 
 
 
