@@ -331,6 +331,8 @@ footer a:hover {
 
     .hero-section {
         height: auto;
+        min-height: 200px;
+        padding: 2rem 1rem;
     }
 
     header {
@@ -399,4 +401,5 @@ footer a:hover {
     }
 
 }
+
 
