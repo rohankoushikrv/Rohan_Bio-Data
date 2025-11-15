@@ -1,0 +1,400 @@
+/* Import new modern font: Poppins, and a techy font for headings: Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Orbitron:wght@400;700&display=swap');
+
+/* --- Keyframe Animations for Energy --- */
+@keyframes background-pan {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: -200% 0%; /* Move background left */
+    }
+}
+
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.4), 0 0 20px rgba(0, 200, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 200, 255, 0.6), 0 0 25px rgba(0, 200, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.4), 0 0 20px rgba(0, 200, 255, 0.2);
+    }
+}
+
+/* Basic Page Setup - ENERGETIC DARK MODE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d; /* Even darker base */
+    color: #F8F8F8; /* White text for contrast */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0; /* Remove initial padding, container handles it */
+    display: flex;
+    flex-direction: column; /* Stack mantra, then container */
+    justify-content: flex-start; /* Align from the top */
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll from background effect */
+
+    /* Energetic Background Gradient with Animation
+    background: linear-gradient(90deg, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d);
+    background-size: 200% 100%; /* Make gradient wider than screen */
+   /* animation: background-pan 30s linear infinite; /* Slow, continuous pan */
+    /*background-attachment: fixed; */
+}
+
+/* Srirastu Shubhamastu at the very top */
+.top-mantra {
+    color: #F8F8F8; /* White text */
+    font-family: 'Orbitron', sans-serif; /* Techy font */
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.7); /* Subtle glow */
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.top-mantra span {
+    display: inline-block;
+    animation: pulse-shadow 3s ease-in-out infinite alternate;
+}
+
+.top-mantra span:nth-child(2) {
+    animation-delay: 1.5s; /* Slightly delay the second word's pulse */
+}
+
+
+/* Scrollbar Styling - ENERGETIC DARK MODE */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #00C8FF; /* Electric Blue accent */
+    border-radius: 10px;
+    border: 3px solid #0d0d0d;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #00A6D9;
+}
+
+/* Main Biodata Card - ENERGETIC DARK MODE */
+.biodata-container {
+    max-width: 900px; /* Slightly wider */
+    width: 95%; /* Responsive width */
+    margin: 20px auto 40px auto; /* More vertical margin */
+    background-color: rgba(20, 20, 20, 0.95); /* Semi-transparent dark container */
+    border-radius: 18px; /* Slightly rounder */
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.2), 0 0 50px rgba(0, 200, 255, 0.1); /* Blue glow shadow */
+    overflow: hidden;
+    border: 1px solid rgba(0, 200, 255, 0.4); /* Glowing border */
+    transition: all 0.5s ease;
+}
+
+.biodata-container:hover {
+    box-shadow: 0 0 35px rgba(0, 200, 255, 0.4), 0 0 70px rgba(0, 200, 255, 0.2); /* Enhanced glow on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Hero Section (Profile Picture) */
+.hero-section {
+    position: relative;
+    height: 300px; /* Generous space for the image */
+    background: linear-gradient(45deg, #00C8FF, #007bff); /* Blue gradient fallback */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 3px solid #00C8FF;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1); /* Subtle enhancement */
+    transition: filter 0.3s ease;
+}
+
+.profile-photo:hover {
+    filter: brightness(1) contrast(1.2); /* Brighter on hover */
+}
+
+
+/* Header Styling - ENERGETIC DARK */
+header {
+    background: linear-gradient(90deg, #00C8FF, #007bff); /* Electric Blue gradient */
+    color: #0d0d0d; /* Dark text on bright header */
+    padding: 30px 40px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Techy heading font */
+    text-shadow: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* Section Styling - ENERGETIC DARK */
+.details-section {
+    padding: 35px 40px;
+    border-bottom: 1px dashed rgba(0, 200, 255, 0.2); /* Subtle glowing dashed line */
+    transition: background-color 0.3s ease;
+}
+
+.details-section:last-of-type {
+    border-bottom: none;
+}
+
+.details-section:hover {
+    background-color: rgba(30, 30, 30, 0.8); /* Darker hover effect */
+}
+
+.details-section h2 {
+    font-family: 'Orbitron', sans-serif; /* Techy sub-heading font */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00C8FF; /* Electric Blue accent */
+    border-bottom: 2px solid rgba(0, 200, 255, 0.4); /* Glowing separator */
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 200, 255, 0.5); /* Subtle glow */
+}
+
+/* Definition List (dl) - ENERGETIC DARK */
+dl {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 15px 25px;
+    align-items: center;
+}
+
+dt {
+    font-weight: 600;
+    color: #00C8FF; /* Electric Blue for labels */
+    font-size: 1.15rem;
+    position: relative;
+    padding-left: 0; /* Remove padding */
+    text-shadow: 0 0 3px rgba(0, 200, 255, 0.3); /* Small glow for labels */
+}
+
+dd {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #F8F8F8; /* White text for data */
+}
+
+/* Horoscope Section Layout - ENERGETIC DARK */
+.horoscope-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.astro-details {
+    flex: 2;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+.horoscope-chart {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.8); /* Dark transparent chart background */
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.2); /* Blue glow */
+}
+
+.horoscope-chart h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #00C8FF; /* Electric Blue accent */
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+}
+
+/* Horoscope Table Styling - ENERGETIC DARK */
+.horoscope-chart table {
+    width: 200px;
+    height: 200px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #F8F8F8;
+    border: 2px solid rgba(0, 200, 255, 0.5); /* Glowing border */
+}
+
+.horoscope-chart td {
+    border: 1px solid rgba(0, 200, 255, 0.3); /* Subtle glowing borders */
+    width: 66px;
+    height: 66px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    background-color: #1a1a1a; /* Dark cells */
+    transition: background-color 0.2s ease;
+}
+
+.horoscope-chart td:hover {
+    background-color: #252525; /* Lighter hover */
+}
+
+.horoscope-chart .center-box {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.3;
+    background-color: #00567a; /* Darker Electric Blue for center */
+    color: #F8F8F8;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Footer (Contact Info) - ENERGETIC DARK */
+footer {
+    background-color: #0a0a0a; /* Very dark footer */
+    color: #F8F8F8;
+    padding: 30px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 200, 255, 0.3);
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4);
+    font-family: 'Poppins', sans-serif;
+}
+
+footer h3 {
+    margin-top: 0;
+    font-size: 1.7rem;
+    color: #00C8FF; /* Electric Blue accent */
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+footer a {
+    color: #00C8FF; /* Electric Blue for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #F8F8F8; /* White on hover */
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Responsiveness (Adjusted for Energetic Dark Mode) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .top-mantra {
+        font-size: 1.3rem;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .biodata-container {
+        width: 98%;
+        margin: 15px auto 30px auto;
+    }
+
+    .hero-section {
+        height: 200px;
+    }
+
+    header {
+        padding: 25px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .details-section {
+        padding: 25px 20px;
+    }
+
+    .details-section h2 {
+        font-size: 1.6rem;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    dt {
+        font-size: 1.1rem;
+    }
+
+    dd {
+        font-size: 1rem;
+        padding-left: 15px;
+        border-left: 3px solid rgba(0, 200, 255, 0.5); /* Accent line */
+    }
+
+    .horoscope-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .astro-details {
+        padding-right: 0;
+    }
+
+    .horoscope-chart {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 25px;
+    }
+
+    .horoscope-chart table {
+        width: 180px;
+        height: 180px;
+        font-size: 1rem;
+    }
+    
+    .horoscope-chart td {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer {
+        padding: 25px 20px;
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+    }
+}
