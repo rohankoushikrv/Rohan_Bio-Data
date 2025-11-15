@@ -313,7 +313,7 @@ footer a:hover {
 }
 
 /* Mobile Responsiveness (Adjusted for Energetic Dark Mode) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         padding: 15px 10px;
     }
@@ -330,8 +330,8 @@ footer a:hover {
     }
 
     .hero-section {
-        min-height: 200px;
-        padding: 2rem 1rem;
+        width: 100;
+        height: 300;
     }
 
     header {
@@ -400,6 +400,7 @@ footer a:hover {
     }
 
 }
+
 
 
 
