@@ -330,8 +330,13 @@ footer a:hover {
         margin: 15px auto 30px auto;
     }
 
-    .hero-section {
+    .hero-section img {
+        width: 100%;
         height: auto;
+        object-fit: cover;
+        object-position: center center; /* keeps the middle of the photo visible */
+        display: block;
+        margin: 0 auto;
     }
     header {
         padding: 25px 20px;
@@ -398,3 +403,4 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
