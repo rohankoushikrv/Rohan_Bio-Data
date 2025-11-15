@@ -108,29 +108,7 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(-5px); /* Lift effect */
 }
 
-.hero-section {
-    position: relative;
-    height: auto; /* Desktop height */
-    width: 100%;   /* Full width */
-    background: linear-gradient(45deg, #00C8FF, #007bff); /* Gradient fallback */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-bottom: 3px solid #00C8FF;
-}
 
-/* Profile Photo */
-.profile-photo {
-    max-width: 100%;       /* Prevents overflow */
-    max-height: 100%;      /* Keeps within hero height */
-    object-fit: cover;     /* Fills space without distortion */
-    object-position: center center; /* Always center the image */
-    filter: brightness(0.9) contrast(1.1);
-    transition: filter 0.3s ease;
-    display: block;
-    margin: 0 auto;        /* Centers horizontally */
-}
 
 /* Header Styling - ENERGETIC DARK */
 header {
@@ -402,6 +380,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
 
 
 
