@@ -111,7 +111,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* Hero Section (Profile Picture) */
 .hero-section {
     position: relative;
-    height: 200%; /* Generous space for the image */
+    height: 300px; /* Generous space for the image */
     width: 100%;
     background: linear-gradient(45deg, #00C8FF, #007bff); /* Blue gradient fallback */
     display: flex;
@@ -404,6 +404,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
 
 
 
