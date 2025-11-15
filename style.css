@@ -330,7 +330,7 @@ footer a:hover {
     }
 
     .hero-section {
-        height: 300px;
+        height: auto;
     }
 
     header {
@@ -399,3 +399,4 @@ footer a:hover {
     }
 
 }
+
